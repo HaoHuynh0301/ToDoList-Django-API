@@ -17,4 +17,9 @@ class ToDoView(generics.ListAPIView):
 class ToDoDetailView(generics.RetrieveAPIView):
     queryset = models.ToDo.objects.all()
     serializer_class = ToDoSerializer
+    
+class ToDoUpdateView(generics.UpdateAPIView):
+    queryset = models.ToDo.objects.all()
+    serializer_class = ToDoSerializer
+    
 
